@@ -1,0 +1,13 @@
+/target/
+/build/
+/.settings/
+/.classpath
+/.factorypath
+/.project
+/.idea/
+/.eclipse-pmd
+*.idea
+*.iml
+.DS_Store
+*.log
+
