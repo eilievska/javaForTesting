@@ -7,8 +7,8 @@ public class Palindrome {
      * For example, the words "level", "mom", "Kayak", "noon" are a palindromes.
      * <b>Note: the function should be case insensitive, meaning that you should ignore the case of the letters in the words.</b>
      *
-     * @param word
-     * @return
+     * @param word to be checked if it's a palindrome.
+     * @return true if the word is a palindrome, false otherwise.
      */
     public boolean isPalindromeCheck(String word) {
         // TODO Implement function here.
