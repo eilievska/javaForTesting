@@ -11,8 +11,22 @@ public class ArrayConcatenation {
      * @param secondArray
      * @return concatenated array.
      */
-    public int[] concatenateArrays(int[] firstArray, int[] secondArray) {
-        // TODO Implement here...
-        return null;
+    public static void main(String[] args) {
+        concatenateArrays(new int[]{2, 5, 3, 1, 6, 9}, new int[]{2, 5, 3, 1, 6, 9});
+
+    }
+
+    public static int[] concatenateArrays(int[] firstArray, int[] secondArray) {
+
+        int newArray[] = new int[firstArray.length + secondArray.length];
+
+        for (int j = 0; j <= firstArray.length - 1; j++) {
+            newArray[j] = firstArray[j];
+        }
+        for (int j = firstArray.length; j <= newArray.length - 1; j++) {
+            newArray[j] = secondArray[j - firstArray.length];
+        }
+        return newArray;
     }
 }
+
