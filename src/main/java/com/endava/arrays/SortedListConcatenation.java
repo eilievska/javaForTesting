@@ -1,5 +1,7 @@
 package com.endava.arrays;
 
+import java.util.Arrays;
+
 public class SortedListConcatenation {
 
     /**
@@ -11,8 +13,19 @@ public class SortedListConcatenation {
      * @param secondArray sorted array
      * @return sorted, merged array.
      */
-    public int[] concatenateSortedArrays(int[] firstArray, int[] secondArray) {
-        // TODO Implement here...
-        return null ;
+
+
+    public static int[] concatenateSortedArrays(int[] firstArray, int[] secondArray) {
+        int newArray[] = new int[firstArray.length + secondArray.length];
+        int j = 0;
+
+        for (; j <= firstArray.length - 1; j++) {
+            newArray[j] = firstArray[j];
+        }
+        for (; j <= newArray.length - 1; j++) {
+            newArray[j] = secondArray[j - firstArray.length];
+        }
+        Arrays.sort(newArray);
+        return newArray;
     }
 }
