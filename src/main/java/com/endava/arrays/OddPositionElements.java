@@ -1,5 +1,7 @@
 package com.endava.arrays;
 
+import java.util.Arrays;
+
 public class OddPositionElements {
 
     /**
@@ -9,8 +11,20 @@ public class OddPositionElements {
      * @param inputArray
      * @return
      */
-    public int[] getArrayOfOddPositions(int[] inputArray) {
-        // TODO Implement here!
-        return null;
+
+    public static void main(String[] args) {
+        getArrayOfOddPositions(new int[]{78, 12, 13, 11, 45});
+    }
+
+    public static int[] getArrayOfOddPositions(int[] inputArray) {
+        //inputArray/2
+        int outputArray[] = new int[Math.round(inputArray.length / 2)];
+
+        for (int i = 0; i < inputArray.length; i++) {
+            if (i % 2 != 0) {
+                outputArray[Math.round(i / 2)] = inputArray[i];
+            }
+        }
+        return outputArray;
     }
 }
