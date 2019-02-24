@@ -17,7 +17,7 @@ public class OddPositionElements {
     }
 
     public static int[] getArrayOfOddPositions(int[] inputArray) {
-        //inputArray/2
+
         int outputArray[] = new int[Math.round(inputArray.length / 2)];
 
         for (int i = 0; i < inputArray.length; i++) {
